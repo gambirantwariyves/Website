@@ -1,0 +1,182 @@
+.logo img{
+    size: 100px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+.sidbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition:  all 0.4s ease;
+}
+
+.sidbar.active{
+    width: 270px;
+    transition:  all 0.4 ease;
+}
+.sidbar .logo_conent .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+}
+.sidbar.active .logo_conent .logo{
+    opacity: 1;
+}
+.logo_conent .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_conent .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.name_job{
+    cursor: pointer;
+}
+.sidbar #btn{
+    position:absolute;
+    color: #fff;
+    cursor: pointer;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+.sidbar.active #btn{
+    left: 90%;
+}
+.sidbar ul{
+    margin-top: 20px;
+}
+.sidbar ul li{
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    border-radius: 12px;
+}
+.sidbar ul li input{
+    position:absolute;
+    height:50px;
+    left: 0;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: #1d1b31;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.4s ease ;
+}
+.sidbar.active input{
+ display: block;
+ opacity: 1;
+ text-align: center;
+
+}
+.sidbar ul li .img{
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #fff;
+}
+.sidbar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+.sidbar ul li a:hover{
+    color: #11101d;
+    background-color: #fff;
+    border-radius: 12px;
+}
+.sidbar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+.sidbar .profile_content{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.sidbar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: #1d1b31;
+}
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+}
+.profile_content .profile .profile_details img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+}
+.sidbar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+} .sidbar.active .profile .profile_details img{
+    opacity: 1;
+}
+.profile_content .profile  .name_job{
+    margin-left: 10px;
+    font-weight: 400;
+}
+.profile_content .profile .job{
+    font-size: 12px;
+}
+.profile #log_out{
+    position: absolute;
+    left: 88%; 
+    transform: translateX(-50%);
+    bottom: 5px;
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+.home_conent{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 249px);
+}
+.home_conent .text {
+    font-size: 25px;
+    font-weight: 400;
+
+}
